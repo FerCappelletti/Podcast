@@ -1,0 +1,97 @@
+$margin-body: 0;
+$padding-body: 0;
+
+$color-fondo: #0000A3 linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+$color-boton: #00F3BB;
+$color-secundario: #060A24;
+$color-primero: #000000;
+$color-tercero: white;
+
+/*font-family "https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Sans+Condensed|IBM+Plex+Serif&display=swap */
+$fontfamily1: 'IBM Plex Sans', sans-serif;
+$fontfamily2: 'IBM Plex Mono', monospace;
+
+/*font-size del spect*/
+$font-size6: 14px;
+$font-size5: 16px;
+$font-size4: 18px;
+$font-size3: 24px;
+$font-size2: 48px;
+$font-size1: 64px;
+
+/*media queries*/
+$min-width-mb-s: 330px;
+$max-width-mb-s: 480px;
+
+
+
+
+%h1 {
+    font-family: $fontfamily1;
+    font-size: $font-size1;
+    margin-left: 10%;
+}
+
+%h2 {
+    color: $color-secundario; 
+    font-family: $fontfamily1;
+    font-size: $font-size2;
+    margin-left: 10%;
+
+    @media screen and (min-width: $min-width-mb-s) and (max-width: $max-width-mb-s) {
+        font-size: 36px;
+        line-height: 42px;
+        margin-left: 5%;
+    }    
+}
+/*%h3 {
+    font-family: $fontfamily1;
+    font-size: $font-size3;
+}*/
+
+%p {
+    color: $color-secundario;
+    font-family: $fontfamily2;
+    font-size: $font-size5;
+    line-height: 24px;
+
+    @media screen and (min-width: $min-width-mb-s) and (max-width: 480px) {
+        font-size: $font-size6;
+        line-height: 22px;
+    }
+}
+
+%button {
+    align-items: center;
+    background: $color-boton;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    line-height: 24px;
+    margin-top: 50px;
+    width: 100%;
+        &:hover {
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            cursor: pointer;
+        }
+        a {
+            align-self: center;
+            color: $color-secundario;
+            font-family: $fontfamily2;
+            font-size: $font-size4;
+            font-weight: medium;
+            text-decoration: none;
+                &:hover {
+                    color: $color-tercero;
+                    
+                }
+    }
+}
+
+%i {
+    align-self: center;
+    color: $color-secundario;
+    font-size: $font-size4;
+    line-height: 28px;
+}
+
